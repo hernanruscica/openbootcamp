@@ -1,0 +1,18 @@
+/*
+ Modifica el CSS para que el primer elemento de cada lista se muestre de color rojo -
+A través del encadenamiento de selectores, haz que el primer elemento de la primera lista tenga un tamaño de letra de 2rem
+*/
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul>li:first-child{
+    font-size: 2rem;
+}
+li:first-child{
+    color: red;
+}
+
