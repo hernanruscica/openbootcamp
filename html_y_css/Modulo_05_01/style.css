@@ -5,3 +5,23 @@
     margin: 0;
     box-sizing: border-box;
 }
+.gallery-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+}
+
+.gallery-flex__item{
+    width: 300px;
+    padding: 0.8em;        
+    border: 1px solid #333;
+}
+
+.gallery-flex__item__img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
