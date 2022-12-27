@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 80vw;
+    margin: 0 auto;    
+    padding: 2em;
+}
+
+.btn {
+    padding: 1em;
+    width: 200px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.btn::after {
+    content: "Pasa por encima";
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: green;
+}
+
+.btn:hover::after{
+    content: "¡Hecho!";
+}
