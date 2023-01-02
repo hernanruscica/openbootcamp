@@ -1,0 +1,32 @@
+
+
+.padre {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: blueviolet;    
+    border: solid #333 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.hijo {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    border-radius: 10px;  
+}
+
+.padre:hover .hijo {
+    animation: translacion 0.8s ease-in-out ; 
+}
+@keyframes translacion {
+    0% {
+        transform: translate(0px);
+        background-color: #FFF;
+    }
+    100% {
+        transform: translate(100px);
+        background-color: #aaa;
+    }
+   
+}
