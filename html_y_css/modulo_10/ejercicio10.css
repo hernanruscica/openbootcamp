@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contenedor_principal{
+    display: flex;
+    flex-direction: row;     
+    padding: 1em;
+}
+
+.barra_lateral{
+    display: flex;
+    flex-direction: column;   
+    margin: 1em ; 
+}
+
+.barra_lateral__miniatura{
+    width: 220px;
+    min-width: 140px;  
+    border: solid 1px #333;  
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.barra_lateral__miniatura__img{
+    width: 100%;
+    height: auto;  
+    border-radius: 10px;  
+}
+
+.principal {    
+    flex-grow: 2;
+    padding: 0 2em;
+}
+
+.principal__titulo{
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 640px){
+    .principal{
+        width: 100%;
+        padding: 0;
+    }
+    .barra_lateral{
+        flex-direction: row;        
+        gap: 2em;
+        padding: 0;
+        margin: 1em 0;
+    }
+    .contenedor_principal{
+        flex-direction: column-reverse;        
+    }
+    .barra_lateral__miniatura{
+        width: 30vw;
+        padding: 0.6em;
+    }
+}

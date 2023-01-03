@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+.main {
+   font-size: 18px; 
+   width: 94vw;
+   margin: 0 auto;
+}
+.main__rem{
+    font-size: 1rem;
+}
+.main__em{
+    font-size: 1.2em;
+}
+
+.main__paragraph{
+    margin: 2em auto;
+    width: 80%;
+}
+/*cuando el viewport sea mayor a 600px*/
+@media screen and (min-width: 600px){
+    .main {
+        width: 80vw;
+    }
+}

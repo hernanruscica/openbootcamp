@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades rem vs em</title>
+    <link rel="stylesheet" href="rem_vs_em.css">
+</head>
+<body>
+    <main class="main">
+        <h1 class="main__title">Unidades rem vs em</h1>
+        <p class="main__paragraph">
+            En el siguiente ejemplo, el <i>font-size</i> del <i>root</i> (etiqueta html) es de <strong>16px</strong>. <br>
+            Con lo cual la seccion <i>"Ejemplos rem"</i> que tiene un <i>font-size</i> de 1rem, tiene <strong>16px</strong> igual que el <i>root</i> que es de 16px.
+            Ya que es 1 unidad del elemento padre html<br>
+            En cambio <i>"Ejemplos em"</i> tiene un <i>font-size</i> de 1.2em . Es decir que mide 1.2 del  <i>font-size</i> de su elemento padre más cercano, es decir el <i>main</i>, que tiene un font-size de <strong>18px</strong><br>
+            El tamaño resultante es 1.2 multiplicado por 18px = 21.6px <br>
+        </p>
+        <section class="main__rem">
+            <h2 class="main__title">Ejemplos <strong>rem</strong></h2>
+            <p class="main__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia sapiente quod eum quas assumenda, aliquam
+                libero nesciunt optio maxime! Quas numquam et, consequuntur autem eveniet voluptatibus voluptatem accusamus laboriosam!
+            </p>
+        </section>
+        <section class="main__em">
+            <h2 class="main__title">Ejemplos <strong>em</strong></h2>
+            <p class="main__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia sapiente quod eum quas assumenda, aliquam
+                libero nesciunt optio maxime! Quas numquam et, consequuntur autem eveniet voluptatibus voluptatem accusamus laboriosam!
+            </p>
+        </section>
+        <section class="main__em">   
+            <h2 class="main__title">Anidando <i>"ems"</i></h2>         
+            <section class="main__em">
+                <p class="main__paragraph">Parrafo dentro de dos clases <i>main__em</i> tiene un <i>font-size</i> de 18px * 1.2 * 1.2 = 25.92px</p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

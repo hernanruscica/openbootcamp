@@ -1,0 +1,65 @@
+<!--
+    Crea un nuevo documento HTML con el título "Diseño Responsive con CSS"
+
+        Crea un nuevo fichero CSS e impórtalo en el documento HTML principal
+
+        Crea las siguientes dos secciones:
+            Una barra lateral izquierda con tres elementos en vertical-
+            Una sección principal a la derecha-
+            (Tip: Utiliza la disposición flex donde la sección principal utilizará flex-grow)-
+
+        Utiliza las media queries para que cuando el ancho del viewport sea menor de 640px ocurra lo siguiente:
+            La barra lateral izquierda se muestre como una navegación en la parte inferior
+            La disposición de los elementos de la barra lateral se vuelva horizontal
+            (Tip: Trabaja con la propiedad flex-direction)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Responsive con CSS</title>
+    <link rel="stylesheet" href="ejercicio10.css">
+</head>
+<body>
+    
+    <main class="contenedor_principal">
+        <section class="barra_lateral">
+            <div class="barra_lateral__miniatura">
+                <figure>
+                    <img class="barra_lateral__miniatura__img" src="imgs/pexels-anel-rossouw-2558605.jpg" alt="">
+                    <figcaption>Imagen de un gato con ojos celestes</figcaption>
+                </figure>
+            </div>
+            <div class="barra_lateral__miniatura">
+                <figure>
+                    <img class="barra_lateral__miniatura__img"  src="imgs/pexels-inge-wallumrød-177809.jpg" alt="">
+                    <figcaption>Imagen de un gato peludito</figcaption>
+                </figure>
+            </div>
+            <div class="barra_lateral__miniatura">
+                <figure>
+                    <img class="barra_lateral__miniatura__img"  src="imgs/pexels-matthias-zomer-422220.jpg" alt="">
+                    <figcaption>imagen de un perro petiso corriendo por el pasto</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="principal">
+            <h1 class="principal__titulo">Diseño Responsive con CSS</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deserunt quisquam quaerat ipsum magni nam ex
+                numquam odit quae expedita? Omnis aut dolorum cum quibusdam nemo doloremque ab facilis perspiciatis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deserunt quisquam quaerat ipsum magni nam ex
+                numquam odit quae expedita? Omnis aut dolorum cum quibusdam nemo doloremque ab facilis perspiciatis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deserunt quisquam quaerat ipsum magni nam ex
+                numquam odit quae expedita? Omnis aut dolorum cum quibusdam nemo doloremque ab facilis perspiciatis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deserunt quisquam quaerat ipsum magni nam ex
+                numquam odit quae expedita? Omnis aut dolorum cum quibusdam nemo doloremque ab facilis perspiciatis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deserunt quisquam quaerat ipsum magni nam ex
+                numquam odit quae expedita? Omnis aut dolorum cum quibusdam nemo doloremque ab facilis perspiciatis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deserunt quisquam quaerat ipsum magni nam ex
+                numquam odit quae expedita? Omnis aut dolorum cum quibusdam nemo doloremque ab facilis perspiciatis.</p>
+        </section>
+    </main>
+</body>
+</html>
