@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas con bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-1 my-5">Practicas con bootstrap</h1>
+            <div class="row">
+                <h2 class="display-5 my-4">Tablas</h2>
+                <table class="table table-sm table-bordered table-success table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>juan Carlos</th>
+                            <th>Perez</th>
+                            <th>jperez</th>
+                        </tr>
+                        <tr>
+                            <th>Pedro Luis</th>
+                            <th>Gonzalez</th>
+                            <th>pegonzalez</th>
+                        </tr>
+                        <tr>
+                            <th>Ana Maria</th>
+                            <th>Fernandez</th>
+                            <th>amfernandez</th>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">pie de tabla</td>                        
+                        </tr>
+                    </tfoot>
+                </table>           
+            </div>        
+        <div class="container">
+            <h2 class="display-5 my-4">Imagenes</h2>
+            <img src="../modulo_10/imgs/pexels-anel-rossouw-2558605.jpg" 
+                alt=""
+                class="img-fluid w-50 " >
+            <img src="../modulo_10/imgs/pexels-inge-wallumrød-177809.jpg" 
+                alt=""
+                class="w-25 img-thumbnail rounded ">            
+        </div>
+        <div class="container">
+            <h2 class="display-5 my-4">Jumbotron</h2>
+            <div class="bg-light p-5 rounded-3 my-3">
+                <div class="container-fluid">
+                    <h1 class="display-5 fw-bold">Mi Jumbotron</h1>
+                    <p class="col-md-8">
+                        Texto del jumbotron, Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur modi totam voluptates dignissimos
+                        repudiandae numquam voluptas quisquam expedita, est temporibus nam laboriosam, quidem veniam itaque, sunt saepe incidunt
+                        magnam nostrum?
+                    </p>
+                    <button class="btn btn-primary btn-lg">
+                        Boton de ejemplo
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="display-5 my-4">Alerts en bootstrap</h2>
+            
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Well done!</h4>
+                
+                <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                <hr>
+                
+                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-info mb-4" id="liveAlertBtn">Mostrar alerta interactiva</button>
+                     
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                A simple info alert with <a href="#" class="alert-link">an example link</a>. se elimina al hacer click
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const alert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            alert('Disparaste este mensaje de alerta !', 'danger')
+        })
+        }
+    </script>
+</body>
+</html>
