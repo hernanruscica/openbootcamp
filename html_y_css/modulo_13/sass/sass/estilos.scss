@@ -1,0 +1,45 @@
+/*Variables*/
+$tamanio: 2em;
+$miColor: #C6538C;
+$miTransparencia: 0.88;
+$miBackground: rgba($miColor, $miTransparencia);
+
+
+/*Selectores*/
+h1 {
+  margin: $tamanio;
+  background-color: $miBackground;
+  @include texto-importante();
+}
+
+p {
+    text-indent: 1rem;
+    @include texto-importante(#333);
+}
+
+.contenedor {
+    margin: calc($tamanio / 2);
+}
+
+/* Anidamiento de selectores con SASS */
+
+.listado {
+    padding: 4rem;
+    background-color: antiquewhite;
+    width: 25%;
+    font-size: 1.6em;
+    ul {
+        margin: 0 0.5em;
+        li {
+            text-align: center;
+            list-style-type: none;
+            padding-bottom: 0.8em;            
+            border-bottom: dotted $miColor 2px;
+            &:hover{
+                background-color: #C6538C;
+                color: #ddd;
+                cursor: pointer;
+            }
+        }
+    }
+}

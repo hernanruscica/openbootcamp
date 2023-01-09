@@ -1,0 +1,5 @@
+/*
+Se comporta como una funcion, porque se le puede pasar un argumento y lo usa en la declaracion de los estilos.
+Ademas se le puede definir un parametro como 'default', para los casos en que no se le envie argumento.
+Todas las reglas dentro de los corchetes, se reemplazan en otra parte del codigo con la sentencia @include
+*//*# sourceMappingURL=mixins.css.map */

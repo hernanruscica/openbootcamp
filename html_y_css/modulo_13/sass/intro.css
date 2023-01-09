@@ -1,0 +1,73 @@
+.btn, .btn-2 {
+  border: none;
+  padding: 1rem 2rem;
+  margin: 1em 0;
+  color: #2B2B2B;
+}
+.btn:hover, .btn-2:hover {
+  background-color: cyan;
+  color: red;
+  cursor: pointer;
+}
+
+.btn-2 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/*
+Se comporta como una funcion, porque se le puede pasar un argumento y lo usa en la declaracion de los estilos.
+Ademas se le puede definir un parametro como 'default', para los casos en que no se le envie argumento.
+Todas las reglas dentro de los corchetes, se reemplazan en otra parte del codigo con la sentencia @include
+*/
+/*Variables*/
+/*Selectores*/
+h1 {
+  margin: 2em;
+  background-color: rgba(198, 83, 140, 0.88);
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+p {
+  text-indent: 1rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.contenedor {
+  margin: 1em;
+}
+
+/* Anidamiento de selectores con SASS */
+.listado {
+  padding: 4rem;
+  background-color: antiquewhite;
+  width: 25%;
+  font-size: 1.6em;
+}
+.listado ul {
+  margin: 0 0.5em;
+}
+.listado ul li {
+  text-align: center;
+  list-style-type: none;
+  padding-bottom: 0.8em;
+  border-bottom: dotted #C6538C 2px;
+}
+.listado ul li:hover {
+  background-color: #C6538C;
+  color: #ddd;
+  cursor: pointer;
+}
+
+/*
+Instalando SASS de forma global con npm
+$ npm install -g sass    para instalar
+$ sass --watch intro.scss intro.css
+documentacion en https://sass-lang.com/documentation/
+*//*# sourceMappingURL=intro.css.map */
