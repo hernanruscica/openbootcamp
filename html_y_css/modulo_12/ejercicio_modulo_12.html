@@ -1,0 +1,104 @@
+<!--
+    Crea un nuevo documento HTML con el título "Elementos de Interés en Bootstrap" -
+        -Utilizando la página oficial getboostrap.com, añade la última versión de Bootstrap a este documento HTML -
+
+    Crea tres secciones:
+        - En la primera sección crea un Jumbotron replicando el que realizamos en el vídeo -
+            -El botón de llamada a la acción debe abrir una ventana modal -
+
+        - En la segunda sección crea un formulario de contacto con los campos "nombre" (text), "teléfono" (number) y mensaje (textarea) -
+
+        - En la tercera sección crea una tarjeta con tu perfil de desarrollador/a que contenga lo siguiente:  -
+            -Tu nombre en el título -
+            -Una breve descripción - 
+            -Tu email en el footer  -
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Interés en Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>    
+    <section class="container">
+        <div class="bg-light p-5 rounded-3 my-3">
+            <div class="container-fluid">
+                <h1 class="display-5 fw-bold">Ventanas modales</h1>
+                <p class="col-md-10">
+                    Todavia no sabes que son las ventanas modales de Bootstrap? Son muy útiles y fácles de usar, te ayudan a mostrar mensajes y/o separar el flujo de trabajo de tu app o sitio web.<br>
+                    Si todavía no las usas, te invitamos a ver un ejemplo, haciendo click en el botón de abajo, y a practicar con la documentación oficial.
+                </p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Empieza con las ventanas modales YA!
+                </button>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" 
+                tabindex="-1" 
+                data-bs-backdrop="static"
+                aria-labelledby="exampleModalLabel" 
+                aria-hidden="true" 
+                style="background-color:rgba(0, 0, 0, 0.6)">
+            <div class="modal-dialog ">                
+                <div class="modal-content" style="background-color:#b2e5ec">
+                    <div class="modal-header ">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Título del modal</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        Este es un ejemplo de una ventana modal de Bootstrap.
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" aria-describedby="nombreAyuda"  required>
+              <div id="nombreAyuda" class="form-text">Ingrese su nombre de pila.</div>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="tel" class="form-control" id="telefono" aria-describedby="telefonoAyuda"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+              <div id="telefonoAyuda" class="form-text">Formato: 123-456-7890</div>
+            </div>    
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea  class="form-control" 
+                    rows = "6"
+                    id="mensaje" 
+                    aria-describedby="mensajeAyuda" required>
+                </textarea>
+
+                <div id="mensajeAyuda" class="form-text">Ingrese su mensaje</div>
+            </div>            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+    </section>
+    <section class="container ">        
+        <div class="card my-5 mx-auto w-50 " style="height:15rem">
+            <div class="card-header">
+                Cesar Hernan Ruscica
+            </div>
+            <div class="card-body">
+                Soy estudiante de desarrollado full stack. Manejo bien <strong>Javascript</strong>, <strong>diseño responsive</strong>, <strong>node.js</strong> y <strong>PHP</strong>.
+            </div>
+            <div class="card-footer">
+                <a class="card-link" href="mailto:me@ruscica-code.ar">me@ruscica-code.ar</a>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
