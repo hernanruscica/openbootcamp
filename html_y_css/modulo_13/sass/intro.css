@@ -70,4 +70,32 @@ Instalando SASS de forma global con npm
 $ npm install -g sass    para instalar
 $ sass --watch intro.scss intro.css
 documentacion en https://sass-lang.com/documentation/
-*//*# sourceMappingURL=intro.css.map */
+*/
+/*Aca abajo voy a escribir codigo que quiero probar "rapido" (sin tener que actualizar dos archivos), despues puede que lo pase a un archivo externo.*/
+/*********************FUNCIONES CON STRINGS*************************/
+/*Genero tres clases dinamicas con el mismo prefijo*/
+.mi_clase_dinamica_1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.mi_clase_dinamica_2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.mi_clase_dinamica_3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/*Cambio de 'Neue' a 'Bold' dinamicamente*/
+.fuente_dinamica {
+  font-family: "Helvetica Bold";
+  font-size: 1rem;
+}
+
+/*********************FUNCIONES CON NUMEROS*************************/
+.container_dinamico {
+  width: 50px;
+}/*# sourceMappingURL=intro.css.map */

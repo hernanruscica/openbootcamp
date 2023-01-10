@@ -1,3 +1,5 @@
+@use "sass:string";
+@use "sass:math";
 
 @import "sass/componentes.scss";
 @import "sass/mixins.scss";
@@ -9,3 +11,45 @@ $ npm install -g sass    para instalar
 $ sass --watch intro.scss intro.css
 documentacion en https://sass-lang.com/documentation/
 */
+
+/*Aca abajo voy a escribir codigo que quiero probar "rapido" (sin tener que actualizar dos archivos), despues puede que lo pase a un archivo externo.*/
+
+
+/*********************FUNCIONES CON STRINGS*************************/
+
+
+/*Genero tres clases dinamicas con el mismo prefijo*/
+$prefijo: "mi_";
+$class_names: "clase_dinamica_1", "clase_dinamica_2", "clase_dinamica_3" ;
+@each $class_name in $class_names {
+    .#{$prefijo}#{$class_name} {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+}
+/*Cambio de 'Neue' a 'Bold' dinamicamente*/
+$nombre_fuente: "Helvetica Neue";
+$indice_encontrado: str-index($nombre_fuente, "Neue");
+$string_insert: " Bold";
+$fuente_editada: str-slice($nombre_fuente, 0, $indice_encontrado - 2);
+$fuente_editada: str-insert($fuente_editada, $string_insert, $indice_encontrado - 1 );
+.fuente_dinamica {
+    font-family: "#{$fuente_editada}";
+    font-size: 1rem;
+};
+
+
+/*********************FUNCIONES CON NUMEROS*************************/
+
+$width1: 10px;
+$width2: 50px;
+
+@if math.compatible($width1, $width2) == true {
+    $max_width: math.max($width1, $width2);    
+} @else {    
+    $max_width: "9px";    
+}
+
+.container_dinamico {
+    width: #{$max_width};
+}
